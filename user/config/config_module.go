@@ -592,6 +592,7 @@ func (this *SyscallConfig) Parse_SyscallNames(text string) []string {
             syscall_items = append(syscall_items, []string{"wait4", "waitid"}...)
             syscall_items = append(syscall_items, []string{"exit", "exit_group", "rt_sigqueueinfo"}...)
             syscall_items = append(syscall_items, []string{"pidfd_send_signal", "pidfd_open", "pidfd_getfd"}...)
+			syscall_items = append(syscall_items, "ptrace")
         case "%net":
             syscall_items = append(syscall_items, []string{"socket", "socketpair"}...)
             syscall_items = append(syscall_items, []string{"bind", "listen", "accept", "accept4", "connect"}...)
